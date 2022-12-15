@@ -1,5 +1,5 @@
 #Seminar 8 Tuples
-"""
+
 student_1 = ( '00011655', 21, "Turkkurgan 5")
 student_2 = ( '00011155', 20, "Turkkurgan 1")
 if student_1 > student_2:
@@ -16,7 +16,7 @@ my_tuple = ( 'A', 'B', 'C')
 
 for i in enumerate(my_tuple):
  print(i)
-"""
+
 def get_longest_word(list_of_words):
     if len(list_of_words) < 2 or type(list_of_words) == str:
         print("Invalid Argument. List length must be >= 2, only strings allowed.")
