@@ -18,22 +18,24 @@ for i in enumerate(my_tuple):
  print(i)
 """
 def get_longest_word(list_of_words):
-    dictionary = dict()
-    for word in list_of_words:
-        i = 0
-        for character in word:
-            i = i + 1
-        dictionary[word] = i
-    values = []
-    for word in list_of_words:
-        values.append(dictionary[word])
-    values.sort(reverse=True)
-    for word in list_of_words:
-        if dictionary[word] == values[0]:
-            biggest = word
-    print(biggest, values[0])
-
-list_a = ('madina', 'Tolibjonova', 'and')
+    if len(list_of_words) < 2 or type(list_of_words) == str:
+        print("Invalid Argument. List length must be >= 2, only strings allowed.")
+    else:
+        dictionary = dict()
+        for word in list_of_words:
+            i = 0
+            for character in word:
+                i = i + 1
+            dictionary[word] = i
+        values = []
+        for word in list_of_words:
+            values.append(dictionary[word])
+        values.sort(reverse=True)
+        for word in list_of_words:
+            if dictionary[word] == values[0]:
+                biggest = word
+        print(biggest, values[0])
+list_a = ('madina')
 get_longest_word(list_a)
 
 
