@@ -24,7 +24,14 @@ def get_longest_word(list_of_words):
         for character in word:
             i = i + 1
         dictionary[word] = i
-    print(dictionary)
+    values = []
+    for word in list_of_words:
+        values.append(dictionary[word])
+    values.sort(reverse=True)
+    for word in list_of_words:
+        if dictionary[word] == values[0]:
+            biggest = word
+    print(biggest, values[0])
 
 list_a = ('madina', 'Tolibjonova', 'and')
 get_longest_word(list_a)
